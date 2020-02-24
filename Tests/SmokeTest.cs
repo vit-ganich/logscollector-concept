@@ -1,13 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TestStack.White.Factory;
-using TestStack.White;
-using TestStack.White.UIItems.Finders;
-using TestStack.White.UIItems.WindowItems;
-using System.Diagnostics;
-using System.Collections.Generic;
 using LogCollectorTest.PageObjects;
-using TestStack.White.UIItems;
-using System.Windows.Automation;
 using LogCollectorTest.Base;
 
 namespace LogCollectorTest

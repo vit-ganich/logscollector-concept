@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LogCollectorTest.Base.Interfaces
+﻿namespace LogCollectorTest.Base.Interfaces
 {
     public interface ILogsProcessor
     {
@@ -17,6 +11,13 @@ namespace LogCollectorTest.Base.Interfaces
         /// <param name="expected"></param>
         /// <returns></returns>
         bool CompareLogs(string actual, string expected);
+
+        /// <summary>
+        /// Checks whether the logs age doesn't exceed the limit
+        /// </summary>
+        /// <param name="logsPath"></param>
+        /// <param name="limitDays"></param>
+        /// <returns></returns>
         bool CheckLogsAgeLimit(string logsPath, int limitDays);
 
     }

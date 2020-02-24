@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseTest.cs" />
+    <Compile Include="Base\BaseTestPage.cs" />
     <Compile Include="Base\Interfaces\ILogsProcessor.cs" />
     <Compile Include="Base\Interfaces\ITestPage.cs" />
     <Compile Include="Base\LogsProcessor.cs" />

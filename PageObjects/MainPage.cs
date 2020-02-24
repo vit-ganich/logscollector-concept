@@ -1,21 +1,11 @@
-﻿using LogCollectorTest.Base.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TestStack.White;
-using TestStack.White.UIItems;
+﻿using System.Collections.Generic;
 using TestStack.White.UIItems.Finders;
-using TestStack.White.UIItems.WindowItems;
-using LogCollectorTest.ControlHelper;
+using LogCollectorTest.Base;
 
 namespace LogCollectorTest.PageObjects
 {
-    public class MainPage: ITestPage
+    public class MainPage: BaseTestPage
     {
-        public Application Application { get; set; }
-        public Window Window { get; set; }
         public MainPage() { }
 
         #region Artifacts to collect

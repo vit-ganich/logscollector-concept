@@ -1,4 +1,5 @@
-﻿using LogCollectorTest.Base.Interfaces;
+﻿using System;
+using LogCollectorTest.Base.Interfaces;
 
 namespace LogCollectorTest.Base
 {
@@ -6,18 +7,17 @@ namespace LogCollectorTest.Base
     {
         public bool CheckLogsAgeLimit(string logsPath, int limitDays)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public bool CompareLogs(string actual, string expected)
         {
-            //throw new System.NotImplementedException();
-            return true;
+            throw new NotImplementedException();
         }
 
         public string ReadLog(string pathToLog)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

@@ -18,6 +18,7 @@ namespace LogCollectorTest
         private string appPath = "..\\..\\Utils\\esetlogcollector.exe";
         public Application application;
         public Window window;
+        public BaseControl control;
 
         /// <summary>
         /// Page Object for the main window
@@ -29,8 +30,30 @@ namespace LogCollectorTest
         {
             application = Application.Launch(appPath);
             application.WaitWhileBusy();
-            window = Desktop.Instance.Windows().Find(obj => obj.Name.Equals("ESET Log Collector"));
-            TestPage = new TPage { Application = this.application, Window = this.window };
+            window = GetWindow();
+            control = new BaseControl();
+
+            TestPage = new TPage 
+            { 
+                Application = this.application, 
+                Window = this.window,
+                Control = this.control
+            };
+        }
+
+        private Window GetWindow()
+        {
+            // TODO: add logic for apps with many windows
+            string windowToTest = "ESET Log Collector";
+            switch (windowToTest)
+            {
+                case "ESET Log Collector":
+                    return Desktop.Instance.Windows().Find(obj => obj.Name.Equals("ESET Log Collector"));
+                case "Any other project":
+                    return Desktop.Instance.Windows().Find(obj => obj.Name.Contains("Any other window"));
+                default:
+                    throw new ArgumentException("Invalid window specified");
+            }
         }
 
         [TestCleanup]
